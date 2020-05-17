@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PapKasse.dk</title>
+		<style>
+			body {
+				background-color: #000000;
+				color: #b8bdc5;
+				size: 12px;
+				font-family: Open Sans,Helvetica,Arial,sans-serif;
+				height:100vh; 
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			#grad0 { 
+				background-color: #516395; /* For browsers that do not support gradients */
+				background-image: linear-gradient(to bottom right, #516395, #614385); /* Standard syntax (must be last) */
+			}
+
+			#grad1 {
+				background-color: #44A08D; /* For browsers that do not support gradients */
+				background-image: linear-gradient(to bottom right, #44A08D, #093637); /* Standard syntax (must be last) */
+			}
+
+			#grad2 {
+				background-color: #cbb4d4; /* For browsers that do not support gradients */
+				background-image: linear-gradient(to bottom right, #cbb4d4, #20002c); /* Standard syntax (must be last) */
+			}
+			
+			#grad3 {
+				background-color: #283e51; /* For browsers that do not support gradients */
+				background-image: linear-gradient(to bottom right, #4b79a1, #283e51); /* Standard syntax (must be last) */
+			}			
+			
+			.centered {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				/* bring your own prefixes */
+				transform: translate(-50%, -50%);
+			}
+
+			.bottomcentered {
+				position: fixed;
+				bottom: 20px;
+				left: 50%;
+				/* bring your own prefixes */
+				transform: translate(-50%, -50%);
+			}			
+		</style>
+		<script>
+			function getRandomInt(max) {
+				return Math.floor(Math.random() * Math.floor(max));
+			}
+			
+			function setBodyId() {
+				document.body.id = 'grad' + getRandomInt(4);
+			}
+			
+			window.onload = setBodyId;		
+		</script>		
+	</head>
+	<body>
+		<img class="centered" src=".\PapKasse.png" />
+		<div class="bottomcentered">Copyright &copy; 2020 PapKasse.dk<div>
+	</body>
+</html>
